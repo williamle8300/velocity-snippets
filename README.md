@@ -1,3 +1,35 @@
+# Dependencies
+- jQuery
+
+# Basics
+```javascript
+var $viewport = jQuery(someSelector);
+$viewport.velocity(properties, options);
+```
+```javascript
+var properties = {
+  width:          '500px',
+  paddingLeft:    '2px'
+  //property3:    value3
+  //property4:    value4
+  //property5:    value5
+}
+var options = {
+  duration:       400,
+  easing:         'swing',
+  queue:          Boolean,//'true' default
+  display:        "block"//'auto' default, 'inline', etc.
+  begin:          Function($elements),
+  progress:       Function($elements),
+  complete:       Function($elements),//callback
+  display:        Function($elements),
+  visibility:     Function(elements),
+  loop:           Boolean || Number,//'false' default. 'true' is infinite looping
+  delay:          Boolean || Number//'false' default
+}
+
+```
+
 # Gotchas
  - Animations are run sequentially (only runs after previous animation has completed)
  - You don't have to use the chaining syntax for the animations to be queued properly.
@@ -11,6 +43,6 @@
  - Want to weave in some asynchrony Velocity's animations? Use their "utility" pattern which exposes a promised interface: 
 ```javascript
 jQuery.Velocity.animate($ele, { opacity: 0.5 })
-  .then(function($ele) {console.log("Resolved."); })
+  .then(function($elements) {console.log("Resolved."); })
   .catch(function(error) { console.log("Rejected."); });
 ```

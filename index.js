@@ -5,6 +5,7 @@
 
 var $viewport = jQuery(someSelector);
 
+//using optinons
 $viewport.velocity(
 {                         //<properties
   width: '500px',
@@ -19,7 +20,7 @@ $viewport.velocity(
   display: "block"//'auto' default, 'inline', etc.
   begin: Function(elements),
   progress: Function(elements),
-  complete: Function(elements),
+  complete: Function(elements),//callback
   display: Function(elements),
   visibility: Function(elements),
   loop: Boolean || Number,//'false' default. 'true' is infinite looping
@@ -64,11 +65,5 @@ $viewport
 $viewport.velocity({ top: 50 }, 1000);
 $viewport.velocity({ top: 50 }, 1000, 'swing');
 $viewport.velocity({ top: 50 }, 'swing');
-
-/**
- * Using callbacks in Velocity
- */
       
-$viewport
-  .velocity({ top: 50 }, 1000, function() { alert('Hi'); });
 
