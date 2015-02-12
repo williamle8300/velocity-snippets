@@ -8,7 +8,7 @@ $viewport.velocity(properties, options);
 ```
 ```javascript
 var properties = {
-  width:          '500px',
+  width:          '500',//or '500px', Velocity uses the natural unit
   paddingLeft:    '2px'
   //property3:    value3
   //property4:    value4
