@@ -42,7 +42,7 @@ var options = {
  - Velocity does vendor prefixes (ex: just use "transform," not "-webkit-transform")
  - Need to weave some asynchrony into Velocity's animations? Use their "utility" pattern which exposes a "promised" interface: 
 ```javascript
-jQuery.Velocity.animate($ele, { opacity: 0.5 })
-  .then(function($elements) {console.log("Resolved."); })
-  .catch(function(error) { console.log("Rejected."); });
+jQuery.Velocity.animate($element, {opacity: 0.5})
+  .then(function($elements) {console.log("Resolved.");})
+  .catch(function(error) {console.log("Rejected.");});
 ```

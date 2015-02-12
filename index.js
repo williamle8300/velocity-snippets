@@ -2,7 +2,7 @@ var $viewport = jQuery(someSelector);
 var callback = function () {console.log('calla back yo')}
 
 /**
- * Basics
+ * Basic
  */
 
 //using options
@@ -33,7 +33,7 @@ $viewport.velocity(properties, options);
  * Novice
  */
 
-properties = { 
+properties = {
   top: 50,  //Defaults to the px unit type
   left: "50%",
   width: "+=5rem",  //Add 5rem to the current rem value
@@ -55,7 +55,7 @@ options = {
   easing: [1000, 20] //spring physics
 }
 
-$viewport.velocity(propertise, options);
+$viewport.velocity(properties, options);
 
 /**
  * Scrolling animations
