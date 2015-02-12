@@ -1,12 +1,10 @@
-/**************************
-* TRIGGER SELF ANIMATION *
-**************************/
-
 /**
- * Two acceptable syntaxes
- */
+ * Dependences: jQuery
+ * Note: link jQuery to the environment before Velocity
+ */ 
 
-//SYNTAX #1
+var $viewport = jQuery(someSelector);
+
 $viewport.velocity(
 {                         //<properties
   width: '500px',

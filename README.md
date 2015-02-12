@@ -1,6 +1,4 @@
-
 # Gotchas
-
  - Animations are run sequentially (only runs after previous animation has completed)
  - You don't have to use the chaining syntax for the animations to be queued properly.
  - "display: none" or "visibility: hidden" always gets applied after animation completes, while "display: block" or "visibility: visible" applies before animation begins
@@ -11,7 +9,7 @@
  - Don't use shorthand attributes (ex: use "paddingLeft" not "padding")
  - Velocity does vendor prefixes (ex: just use "transform," not "-webkit-transform")
  - Want to weave in some asynchrony Velocity's animations? Use their "utility" pattern which exposes a promised interface: 
-```
+```javascript
 jQuery.Velocity.animate($ele, { opacity: 0.5 })
   .then(function($ele) {console.log("Resolved."); })
   .catch(function(error) { console.log("Rejected."); });
