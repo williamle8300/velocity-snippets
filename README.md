@@ -40,6 +40,10 @@ var options = {
  - If a unit is left out, it defaults to the natural unit (ex: "200" becomes "200px" for divs, "deg" for "rotateX")
  - Don't use shorthand attributes (ex: use "paddingLeft" not "padding")
  - Velocity does vendor prefixes (ex: just use "transform," not "-webkit-transform")
+ - Use the "utility syntax" to reveal promises API:
+ ```javascript
+ $.Velocity($selector, properties, options);
+ ```
  - Need to weave some asynchrony into Velocity's animations? Use their "utility" pattern which exposes a "promised" interface: 
 ```javascript
 jQuery.Velocity.animate($element, {opacity: 0.5})

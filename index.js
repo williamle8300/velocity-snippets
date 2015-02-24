@@ -14,7 +14,7 @@ var properties = {
   //[property5: value5]
 }
 var options = {
-  duration: 400,
+  duration: 400,//ms
   easing: 'swing',
   queue: Boolean,//'true' default
   display: "block"//'auto' default, 'inline', etc.
@@ -54,8 +54,6 @@ properties = {
 options = {
   easing: [1000, 20] //spring physics
 }
-
-$viewport.velocity(properties, options);
 
 /**
  * Scrolling animations
